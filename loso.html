@@ -1,0 +1,2221 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>I Love You Sohil ❤️</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Vazirmatn:wght@300;400;500&display=swap"
+      rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#080207;
+
+    color:white;
+
+    font-family:
+        "Vazirmatn",
+        sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:999;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            transparent 40%,
+            rgba(0,0,0,.55) 100%
+        );
+
+}
+
+
+/* =====================================================
+   STARS CANVAS
+===================================================== */
+
+#stars{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+.floating-hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+.floating-heart{
+
+    position:absolute;
+
+    bottom:-40px;
+
+    color:#ff477e;
+
+    opacity:0;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(255,50,110,.7)
+        );
+
+    animation:
+        riseHeart
+        linear
+        forwards;
+
+}
+
+@keyframes riseHeart{
+
+    0%{
+
+        transform:
+            translateY(0)
+            translateX(0)
+            rotate(0)
+            scale(.5);
+
+        opacity:0;
+
+    }
+
+    10%{
+        opacity:.6;
+    }
+
+    80%{
+        opacity:.35;
+    }
+
+    100%{
+
+        transform:
+            translateY(-110vh)
+            translateX(var(--move))
+            rotate(360deg)
+            scale(1.2);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 42%,
+            rgba(116,12,67,.8) 0%,
+            rgba(48,3,31,.85) 27%,
+            #090208 70%
+        );
+
+}
+
+
+/* center glow */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+    height:550px;
+
+    left:50%;
+    top:48%;
+
+    transform:
+        translate(-50%,-50%);
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,35,105,.2),
+            rgba(255,0,80,.07) 35%,
+            transparent 70%
+        );
+
+    filter:blur(25px);
+
+    animation:
+        centerLight 5s
+        ease-in-out
+        infinite alternate;
+
+    pointer-events:none;
+
+}
+
+@keyframes centerLight{
+
+    from{
+
+        transform:
+            translate(-50%,-50%)
+            scale(.75);
+
+        opacity:.6;
+
+    }
+
+    to{
+
+        transform:
+            translate(-50%,-50%)
+            scale(1.2);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    width:100%;
+
+    max-width:900px;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.eyebrow{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#d895a9;
+
+    font-size:9px;
+
+    letter-spacing:6px;
+
+    margin-bottom:24px;
+
+    opacity:.8;
+
+}
+
+.eyebrow::before,
+.eyebrow::after{
+
+    content:"";
+
+    width:28px;
+    height:1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            #e57c9d
+        );
+
+}
+
+.eyebrow::after{
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #e57c9d,
+            transparent
+        );
+
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.hero-title{
+
+    margin:0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(64px,12vw,135px);
+
+    line-height:.78;
+
+    font-weight:500;
+
+    letter-spacing:-3px;
+
+    color:#fff;
+
+    text-shadow:
+
+        0 5px 25px
+        rgba(255,50,120,.2);
+
+    animation:
+        titleAppear 1.5s
+        cubic-bezier(.16,1,.3,1);
+
+}
+
+.hero-title span{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        clamp(70px,14vw,155px);
+
+    font-weight:400;
+
+    letter-spacing:0;
+
+    color:#ff769d;
+
+    text-shadow:
+
+        0 0 15px
+        rgba(255,50,110,.4),
+
+        0 0 45px
+        rgba(255,30,100,.25);
+
+}
+
+@keyframes titleAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(30px)
+            scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.hero-subtitle{
+
+    margin-top:25px;
+
+    color:#dcbcc7;
+
+    font-size:14px;
+
+    font-weight:300;
+
+    line-height:2;
+
+    opacity:.85;
+
+}
+
+
+/* =====================================================
+   LUXURY HEART
+===================================================== */
+
+.luxury-heart{
+
+    position:relative;
+
+    width:310px;
+    height:310px;
+
+    margin:
+        20px auto 0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/* =====================================================
+   HEART GLOW
+===================================================== */
+
+.heart-glow{
+
+    position:absolute;
+
+    width:170px;
+    height:170px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,25,90,.55),
+            rgba(255,25,90,.15) 35%,
+            transparent 70%
+        );
+
+    filter:blur(20px);
+
+    animation:
+        glowPulse 1.6s
+        ease-in-out
+        infinite;
+
+}
+
+@keyframes glowPulse{
+
+    0%,100%{
+
+        transform:scale(.85);
+
+        opacity:.65;
+
+    }
+
+    50%{
+
+        transform:scale(1.25);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* =====================================================
+   3D HEART
+===================================================== */
+
+.heart-3d{
+
+    position:relative;
+
+    width:105px;
+    height:105px;
+
+    transform:
+        rotate(-45deg);
+
+    border-radius:12px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ff0f42 0%,
+            #ff275f 35%,
+            #ff5c87 65%,
+            #ff1744 100%
+        );
+
+    box-shadow:
+
+        inset
+        -12px -15px 25px
+        rgba(160,0,45,.3),
+
+        inset
+        8px 8px 18px
+        rgba(255,255,255,.22),
+
+        0 0 15px #ff1744,
+
+        0 0 45px #ff1744,
+
+        0 0 90px rgba(255,20,80,.6),
+
+        0 0 150px rgba(255,20,80,.25);
+
+    animation:
+        heartFloat 3s
+        ease-in-out
+        infinite;
+
+    z-index:5;
+
+}
+
+.heart-3d::before,
+.heart-3d::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:105px;
+    height:105px;
+
+    border-radius:50%;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ff0f42,
+            #ff5c87
+        );
+
+}
+
+.heart-3d::before{
+
+    top:-52px;
+
+    left:0;
+
+}
+
+.heart-3d::after{
+
+    top:0;
+
+    left:52px;
+
+}
+
+
+/* =====================================================
+   HEART HIGHLIGHT
+===================================================== */
+
+.heart-highlight{
+
+    position:absolute;
+
+    z-index:10;
+
+    width:35px;
+    height:65px;
+
+    left:20px;
+    top:8px;
+
+    background:
+
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(255,255,255,.75),
+            transparent
+        );
+
+    transform:
+        rotate(45deg);
+
+    filter:blur(3px);
+
+    animation:
+        heartShine 3s
+        infinite;
+
+}
+
+@keyframes heartShine{
+
+    0%,25%{
+
+        left:-25px;
+
+        opacity:0;
+
+    }
+
+    45%{
+
+        opacity:.9;
+
+    }
+
+    65%,100%{
+
+        left:95px;
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* =====================================================
+   HEART FLOAT
+===================================================== */
+
+@keyframes heartFloat{
+
+    0%,100%{
+
+        transform:
+            rotate(-45deg)
+            translateY(0)
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+            rotate(-45deg)
+            translateY(-9px)
+            scale(1.06);
+
+    }
+
+}
+
+
+/* =====================================================
+   ORBITS
+===================================================== */
+
+.orbit{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(255,120,160,.17);
+
+    transform:
+        rotateX(65deg);
+
+    z-index:2;
+
+}
+
+.orbit span{
+
+    position:absolute;
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:#ff8baa;
+
+    box-shadow:
+
+        0 0 10px #ff1744,
+        0 0 25px #ff1744;
+
+    top:-3px;
+
+    left:50%;
+
+}
+
+.orbit-one{
+
+    width:210px;
+    height:210px;
+
+    animation:
+        orbit1 7s
+        linear
+        infinite;
+
+}
+
+.orbit-two{
+
+    width:255px;
+    height:255px;
+
+    transform:
+        rotateX(65deg)
+        rotateY(25deg);
+
+    animation:
+        orbit2 10s
+        linear
+        infinite reverse;
+
+}
+
+.orbit-three{
+
+    width:290px;
+    height:290px;
+
+    transform:
+        rotateX(65deg)
+        rotateY(-30deg);
+
+    animation:
+        orbit3 13s
+        linear
+        infinite;
+
+}
+
+@keyframes orbit1{
+
+    to{
+
+        transform:
+            rotateX(65deg)
+            rotateZ(360deg);
+
+    }
+
+}
+
+@keyframes orbit2{
+
+    to{
+
+        transform:
+            rotateX(65deg)
+            rotateY(25deg)
+            rotateZ(360deg);
+
+    }
+
+}
+
+@keyframes orbit3{
+
+    to{
+
+        transform:
+            rotateX(65deg)
+            rotateY(-30deg)
+            rotateZ(360deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   HEART STARS
+===================================================== */
+
+.heart-stars i{
+
+    position:absolute;
+
+    font-style:normal;
+
+    color:#ff9fba;
+
+    font-size:18px;
+
+    text-shadow:
+        0 0 12px #ff477e;
+
+    animation:
+        starFloat 3s
+        ease-in-out
+        infinite;
+
+}
+
+.heart-stars i:nth-child(1){
+
+    top:35px;
+    left:15px;
+
+}
+
+.heart-stars i:nth-child(2){
+
+    top:75px;
+    right:5px;
+
+    font-size:24px;
+
+    animation-delay:.7s;
+
+}
+
+.heart-stars i:nth-child(3){
+
+    bottom:40px;
+    left:30px;
+
+    animation-delay:1.2s;
+
+}
+
+.heart-stars i:nth-child(4){
+
+    bottom:10px;
+    right:45px;
+
+    animation-delay:1.7s;
+
+}
+
+.heart-stars i:nth-child(5){
+
+    top:25px;
+    right:45px;
+
+    animation-delay:2s;
+
+}
+
+.heart-stars i:nth-child(6){
+
+    bottom:65px;
+    right:15px;
+
+    animation-delay:2.4s;
+
+}
+
+@keyframes starFloat{
+
+    0%,100%{
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        opacity:.5;
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-15px)
+            scale(1.3);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* =====================================================
+   LOVE LINE
+===================================================== */
+
+.love-line{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:-5px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:14px;
+
+    font-style:italic;
+
+    color:#b88999;
+
+    direction:ltr;
+
+}
+
+.love-line span{
+
+    width:45px;
+
+    height:1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            #9c536d
+        );
+
+}
+
+.love-line span:last-child{
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #9c536d,
+            transparent
+        );
+
+}
+
+
+/* =====================================================
+   LETTER BUTTON
+===================================================== */
+
+.letter-button{
+
+    position:relative;
+
+    margin-top:30px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:
+        14px 22px 14px 18px;
+
+    border-radius:100px;
+
+    border:
+        1px solid
+        rgba(255,150,180,.25);
+
+    color:#ffe8ef;
+
+    background:
+        rgba(255,255,255,.045);
+
+    backdrop-filter:
+        blur(20px);
+
+    font-family:
+        "Vazirmatn",
+        sans-serif;
+
+    font-size:13px;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    transition:
+        .45s cubic-bezier(.16,1,.3,1);
+
+    box-shadow:
+
+        0 10px 40px
+        rgba(0,0,0,.25),
+
+        inset 0 0 20px
+        rgba(255,100,140,.04);
+
+}
+
+.letter-button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:80%;
+    height:100%;
+
+    transform:
+        skewX(-25deg);
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.22),
+            transparent
+        );
+
+    transition:.8s;
+
+}
+
+.letter-button:hover::before{
+
+    left:140%;
+
+}
+
+.letter-button:hover{
+
+    transform:
+        translateY(-4px)
+        scale(1.04);
+
+    border-color:
+        rgba(255,120,160,.6);
+
+    background:
+        rgba(255,60,110,.1);
+
+    box-shadow:
+
+        0 15px 45px
+        rgba(255,30,100,.2),
+
+        0 0 30px
+        rgba(255,40,100,.15);
+
+}
+
+.button-icon{
+
+    width:32px;
+    height:32px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,80,120,.15);
+
+    color:#ff8eaa;
+
+    font-size:20px;
+
+    transition:.4s;
+
+}
+
+.letter-button:hover
+.button-icon{
+
+    background:#ff477e;
+
+    color:white;
+
+    box-shadow:
+        0 0 20px #ff477e;
+
+    transform:
+        rotate(10deg)
+        scale(1.1);
+
+}
+
+.button-arrow{
+
+    color:#ff769d;
+
+    transition:.4s;
+
+}
+
+.letter-button:hover
+.button-arrow{
+
+    transform:
+        translateX(-5px);
+
+}
+
+
+/* =====================================================
+   LETTER MODAL
+===================================================== */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    background:
+        rgba(5,0,4,.82);
+
+    backdrop-filter:
+        blur(15px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.5s;
+
+}
+
+.modal.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.letter{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:650px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    padding:45px 38px;
+
+    border-radius:28px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(46,10,31,.97),
+            rgba(15,4,12,.98)
+        );
+
+    border:
+        1px solid
+        rgba(255,120,160,.2);
+
+    box-shadow:
+
+        0 30px 100px
+        rgba(0,0,0,.7),
+
+        0 0 60px
+        rgba(255,30,100,.12);
+
+    transform:
+        translateY(40px)
+        scale(.94);
+
+    transition:
+        .6s cubic-bezier(.16,1,.3,1);
+
+}
+
+.modal.active .letter{
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+.close{
+
+    position:absolute;
+
+    top:18px;
+    left:20px;
+
+    width:35px;
+    height:35px;
+
+    border-radius:50%;
+
+    border:1px solid
+        rgba(255,150,180,.2);
+
+    background:
+        rgba(255,255,255,.04);
+
+    color:#ff9ab5;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.close:hover{
+
+    background:#ff477e;
+
+    color:white;
+
+    transform:rotate(90deg);
+
+}
+
+.letter-title{
+
+    text-align:center;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:55px;
+
+    color:#ff789f;
+
+    margin-bottom:30px;
+
+    direction:ltr;
+
+}
+
+.letter-body{
+
+    color:#e8cbd5;
+
+    font-size:14px;
+
+    line-height:2.4;
+
+    text-align:right;
+
+}
+
+.letter-body p{
+
+    margin-bottom:18px;
+
+}
+
+.signature{
+
+    margin-top:30px;
+
+    text-align:left;
+
+    direction:ltr;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:34px;
+
+    color:#ff789f;
+
+}
+
+
+/* =====================================================
+   CLICK PARTICLES
+===================================================== */
+
+.particle{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    z-index:2000;
+
+    color:#ff477e;
+
+    font-size:18px;
+
+    animation:
+        particleFly
+        900ms
+        ease-out
+        forwards;
+
+}
+
+@keyframes particleFly{
+
+    0%{
+
+        opacity:1;
+
+        transform:
+            translate(0,0)
+            scale(.5);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+            translate(
+                var(--x),
+                var(--y)
+            )
+            scale(1.5)
+            rotate(180deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    .hero-content{
+
+        padding:15px;
+
+    }
+
+    .eyebrow{
+
+        font-size:7px;
+
+        letter-spacing:4px;
+
+    }
+
+    .hero-title{
+
+        font-size:64px;
+
+    }
+
+    .hero-title span{
+
+        font-size:76px;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:12px;
+
+    }
+
+    .luxury-heart{
+
+        width:270px;
+        height:270px;
+
+        margin-top:10px;
+
+    }
+
+    .orbit-one{
+
+        width:180px;
+        height:180px;
+
+    }
+
+    .orbit-two{
+
+        width:220px;
+        height:220px;
+
+    }
+
+    .orbit-three{
+
+        width:250px;
+        height:250px;
+
+    }
+
+    .letter{
+
+        padding:40px 22px;
+
+    }
+
+    .letter-title{
+
+        font-size:45px;
+
+    }
+
+    .letter-body{
+
+        font-size:12px;
+
+        line-height:2.2;
+
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     STARS
+===================================================== -->
+
+<canvas id="stars"></canvas>
+
+
+<!-- =====================================================
+     FLOATING HEARTS
+===================================================== -->
+
+<div class="floating-hearts"
+     id="floatingHearts">
+</div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            A LITTLE PIECE OF MY HEART
+        </div>
+
+
+        <h1 class="hero-title">
+
+            I Love You
+
+            <span>Sohil</span>
+
+        </h1>
+
+
+        <p class="hero-subtitle">
+
+            بعضی آدم‌ها فقط وارد زندگی نمی‌شوند...
+
+            <br>
+
+            آرام‌آرام تبدیل به خودِ زندگی می‌شوند. ❤️
+
+        </p>
+
+
+        <!-- PREMIUM HEART -->
+
+        <div class="luxury-heart">
+
+
+            <div class="orbit orbit-one">
+
+                <span></span>
+
+            </div>
+
+
+            <div class="orbit orbit-two">
+
+                <span></span>
+
+            </div>
+
+
+            <div class="orbit orbit-three">
+
+                <span></span>
+
+            </div>
+
+
+            <div class="heart-glow"></div>
+
+
+            <div class="heart-3d">
+
+                <div class="heart-highlight"></div>
+
+            </div>
+
+
+            <div class="heart-stars">
+
+                <i>✦</i>
+
+                <i>♡</i>
+
+                <i>✧</i>
+
+                <i>♡</i>
+
+                <i>✦</i>
+
+                <i>·</i>
+
+            </div>
+
+        </div>
+
+
+        <div class="love-line">
+
+            <span></span>
+
+            forever starts with you
+
+            <span></span>
+
+        </div>
+
+
+        <button
+            class="letter-button"
+            onclick="openLetter()">
+
+            <span class="button-icon">
+                ♡
+            </span>
+
+            <span>
+                نامه‌ای برای تو
+            </span>
+
+            <span class="button-arrow">
+                ←
+            </span>
+
+        </button>
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     LETTER MODAL
+===================================================== -->
+
+<div class="modal"
+     id="letterModal"
+     onclick="closeOutside(event)">
+
+
+    <div class="letter">
+
+
+        <button
+            class="close"
+            onclick="closeLetter()">
+
+            ×
+
+        </button>
+
+
+        <div class="letter-title">
+
+            For Sohil ♡
+
+        </div>
+
+
+        <div class="letter-body">
+
+            <p>
+                عزیزترینم،
+            </p>
+
+
+            <p>
+
+                از وقتی وارد زندگی من شدی،
+                یه چیزی توی دنیای من
+                برای همیشه قشنگ‌تر شد.
+
+            </p>
+
+
+            <p>
+
+                تو فقط کسی نیستی که دوستش دارم؛
+                تو دلیل خیلی از لبخندهای منی،
+                آرامش قلبمی و یکی از
+                قشنگ‌ترین اتفاق‌های زندگی من.
+
+            </p>
+
+
+            <p>
+
+                شاید هیچ کلمه‌ای نتونه
+                دقیقاً اندازه‌ی احساسی که
+                نسبت بهت دارم رو بیان کنه...
+
+            </p>
+
+
+            <p>
+
+                اما یک چیز را مطمئنم:
+
+                <br>
+
+                هر بار انتخابت می‌کنم. ❤️
+
+            </p>
+
+
+            <p>
+
+                اگر قرار باشه هزار بار
+                دوباره شروع کنم،
+                در هر هزار بار،
+                باز هم به سمت تو میام.
+
+            </p>
+
+
+            <p>
+
+                دوستت دارم،
+                <br>
+
+                ساده،
+                <br>
+
+                عمیق،
+                <br>
+
+                واقعی...
+
+            </p>
+
+
+            <p>
+
+                و امیدوارم این «تو و من»
+                هیچ‌وقت تموم نشه. ❤️
+
+            </p>
+
+
+            <div class="signature">
+
+                Forever yours ♡
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   STAR FIELD
+===================================================== */
+
+const canvas =
+    document.getElementById("stars");
+
+const ctx =
+    canvas.getContext("2d");
+
+let stars = [];
+
+function resizeCanvas(){
+
+    canvas.width =
+        window.innerWidth *
+        devicePixelRatio;
+
+    canvas.height =
+        window.innerHeight *
+        devicePixelRatio;
+
+    ctx.scale(
+        devicePixelRatio,
+        devicePixelRatio
+    );
+
+    createStars();
+
+}
+
+function createStars(){
+
+    stars = [];
+
+    const count =
+        Math.min(
+            140,
+            Math.floor(
+                window.innerWidth *
+                window.innerHeight /
+                9000
+            )
+        );
+
+    for(let i=0;i<count;i++){
+
+        stars.push({
+
+            x:
+                Math.random() *
+                window.innerWidth,
+
+            y:
+                Math.random() *
+                window.innerHeight,
+
+            r:
+                Math.random() *
+                1.4 + .2,
+
+            a:
+                Math.random(),
+
+            speed:
+                Math.random() *
+                .015 + .005
+
+        });
+
+    }
+
+}
+
+function drawStars(){
+
+    ctx.clearRect(
+        0,
+        0,
+        window.innerWidth,
+        window.innerHeight
+    );
+
+    stars.forEach(star => {
+
+        star.a += star.speed;
+
+        const alpha =
+            .35 +
+            Math.sin(star.a) *
+            .3;
+
+        ctx.beginPath();
+
+        ctx.arc(
+            star.x,
+            star.y,
+            star.r,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fillStyle =
+            `rgba(255,180,205,${alpha})`;
+
+        ctx.fill();
+
+    });
+
+    requestAnimationFrame(drawStars);
+
+}
+
+window.addEventListener(
+    "resize",
+    resizeCanvas
+);
+
+resizeCanvas();
+
+drawStars();
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+const heartsContainer =
+    document.getElementById(
+        "floatingHearts"
+    );
+
+function createFloatingHeart(){
+
+    const heart =
+        document.createElement("span");
+
+    heart.className =
+        "floating-heart";
+
+    heart.innerHTML =
+        Math.random() > .5
+        ? "♡"
+        : "♥";
+
+    heart.style.left =
+        Math.random() * 100 + "%";
+
+    heart.style.fontSize =
+        Math.random() * 18 + 10 + "px";
+
+    heart.style.setProperty(
+        "--move",
+        (Math.random() * 160 - 80) + "px"
+    );
+
+    heart.style.animationDuration =
+        Math.random() * 8 + 8 + "s";
+
+    heartsContainer.appendChild(
+        heart
+    );
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    },14000);
+
+}
+
+setInterval(
+    createFloatingHeart,
+    900
+);
+
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+function openLetter(){
+
+    document
+        .getElementById("letterModal")
+        .classList.add("active");
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+function closeLetter(){
+
+    document
+        .getElementById("letterModal")
+        .classList.remove("active");
+
+    document.body.style.overflow =
+        "";
+
+}
+
+function closeOutside(event){
+
+    if(
+        event.target.id ===
+        "letterModal"
+    ){
+
+        closeLetter();
+
+    }
+
+}
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            closeLetter();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   HEART PARTICLES ON CLICK
+===================================================== */
+
+document.addEventListener(
+    "click",
+    function(event){
+
+        for(
+            let i = 0;
+            i < 8;
+            i++
+        ){
+
+            const particle =
+                document.createElement(
+                    "div"
+                );
+
+            particle.className =
+                "particle";
+
+            particle.innerHTML =
+                Math.random() > .5
+                ? "♡"
+                : "✦";
+
+            particle.style.left =
+                event.clientX + "px";
+
+            particle.style.top =
+                event.clientY + "px";
+
+
+            const x =
+                (Math.random() * 180 - 90)
+                + "px";
+
+            const y =
+                (Math.random() * 180 - 120)
+                + "px";
+
+
+            particle.style.setProperty(
+                "--x",
+                x
+            );
+
+            particle.style.setProperty(
+                "--y",
+                y
+            );
+
+
+            document.body.appendChild(
+                particle
+            );
+
+
+            setTimeout(() => {
+
+                particle.remove();
+
+            },1000);
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   MOUSE PARALLAX
+===================================================== */
+
+const hero =
+    document.querySelector(".hero");
+
+const heart =
+    document.querySelector(".heart-3d");
+
+const orbits =
+    document.querySelectorAll(".orbit");
+
+window.addEventListener(
+    "mousemove",
+    function(e){
+
+        if(
+            window.innerWidth < 700
+        ) return;
+
+
+        const x =
+            (e.clientX /
+            window.innerWidth - .5);
+
+        const y =
+            (e.clientY /
+            window.innerHeight - .5);
+
+
+        heart.style.marginLeft =
+            `${x * 12}px`;
+
+        heart.style.marginTop =
+            `${y * 12}px`;
+
+
+        orbits.forEach(
+            (orbit,index) => {
+
+                const amount =
+                    (index + 1) * 3;
+
+                orbit.style.marginLeft =
+                    `${x * amount}px`;
+
+                orbit.style.marginTop =
+                    `${y * amount}px`;
+
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   HEART CLICK EFFECT
+===================================================== */
+
+heart.addEventListener(
+    "click",
+    function(){
+
+        this.style.animation =
+            "none";
+
+        this.offsetHeight;
+
+        this.style.animation =
+            "heartFloat 3s ease-in-out infinite";
+
+        for(
+            let i=0;
+            i<15;
+            i++
+        ){
+
+            const particle =
+                document.createElement(
+                    "div"
+                );
+
+            particle.className =
+                "particle";
+
+            particle.innerHTML =
+                "♥";
+
+            particle.style.left =
+                (
+                    window.innerWidth / 2
+                    +
+                    (Math.random()*100-50)
+                ) + "px";
+
+            particle.style.top =
+                (
+                    window.innerHeight / 2
+                    +
+                    (Math.random()*100-50)
+                ) + "px";
+
+            particle.style.setProperty(
+                "--x",
+                (Math.random()*300-150)+"px"
+            );
+
+            particle.style.setProperty(
+                "--y",
+                (Math.random()*300-150)+"px"
+            );
+
+            document.body.appendChild(
+                particle
+            );
+
+            setTimeout(
+                () => particle.remove(),
+                1000
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>
